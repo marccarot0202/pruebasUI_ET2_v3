@@ -1,44 +1,52 @@
 let alumnograduacion_def_tests = Array(
-    ['alumnograduacion','dni_alumno','input',1,'El DNI debe respetar el formato y la letra de control','ADD','dni_alumno_format_KO','Formato incorrecto'],
-    ['alumnograduacion','dni_alumno','input',2,'El DNI correcto supera la validación','ADD',true,'Valor correcto'],
-    ['alumnograduacion','cod_titulacion','input',3,'El código de titulación solo admite mayúsculas y números','ADD','cod_titulacion_format_KO','Formato incorrecto'],
-    ['alumnograduacion','cod_titulacion','input',4,'Código de titulación válido','ADD',true,'Valor correcto'],
-    ['alumnograduacion','nombre_trabajo','input',5,'El título debe tener longitud suficiente','ADD','nombre_trabajo_min_size_KO','Longitud insuficiente'],
-    ['alumnograduacion','nombre_trabajo','input',6,'Título válido','ADD',true,'Valor correcto'],
-    ['alumnograduacion','anio_academico','input',7,'El curso académico sigue el formato AAAA-AAAA','ADD','anio_academico_format_KO','Formato incorrecto'],
-    ['alumnograduacion','anio_academico','input',8,'Curso académico válido','ADD',true,'Valor correcto'],
-    ['alumnograduacion','nota_final','input',9,'La nota debe ser numérica entre 0 y 10','ADD','nota_final_range_KO','Valor fuera de rango'],
-    ['alumnograduacion','nota_final','input',10,'Nota válida','ADD',true,'Valor correcto'],
-    ['alumnograduacion','tutor_principal','input',11,'El nombre del tutor solo permite letras y espacios','ADD','tutor_principal_format_KO','Formato incorrecto'],
-    ['alumnograduacion','tutor_principal','input',12,'Tutor válido','ADD',true,'Valor correcto'],
-    ['alumnograduacion','fecha_defensa','input',13,'La fecha debe existir en formato dd/mm/aaaa','ADD','fecha_defensa_value_KO','Fecha incorrecta'],
-    ['alumnograduacion','fecha_defensa','input',14,'Fecha válida','ADD',true,'Valor correcto'],
-    ['alumnograduacion','nuevo_memoria_pdf','inputfile',15,'El fichero PDF es obligatorio','ADD','nuevo_memoria_pdf_not_exist_file_KO','Fichero ausente'],
-    ['alumnograduacion','nuevo_memoria_pdf','inputfile',16,'Fichero PDF correcto','ADD',true,'Fichero válido'],
-    ['alumnograduacion','nuevo_memoria_pdf','inputfile',17,'En edición no es obligatorio subir fichero','EDIT',true,'Fichero opcional']
+    ['alumnograduacion','alumnograduacion_login','input',1,'El login debe tener la longitud mínima y caracteres válidos','ADD','alumnograduacion_login_min_size_KO','Longitud insuficiente'],
+    ['alumnograduacion','alumnograduacion_login','input',2,'Login válido','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_password','input',3,'La contraseña debe cumplir el tamaño mínimo','ADD','alumnograduacion_password_min_size_KO','Longitud insuficiente'],
+    ['alumnograduacion','alumnograduacion_password','input',4,'Contraseña válida','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_nombre','input',5,'El nombre solo admite letras y espacios','ADD','alumnograduacion_nombre_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_nombre','input',6,'Nombre válido','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_apellidos','input',7,'Los apellidos solo admiten letras y espacios','ADD','alumnograduacion_apellidos_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_apellidos','input',8,'Apellidos válidos','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_titulacion','input',9,'La titulación debe escribirse en mayúsculas','ADD','alumnograduacion_titulacion_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_titulacion','input',10,'Titulación válida','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_dni','input',11,'El DNI debe respetar el formato y la letra de control','ADD','alumnograduacion_dni_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_dni','input',12,'DNI válido','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_telefono','input',13,'El teléfono debe tener 9 dígitos','ADD','alumnograduacion_telefono_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_telefono','input',14,'Teléfono válido','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_direccion','input',15,'La dirección debe cumplir la longitud mínima','ADD','alumnograduacion_direccion_min_size_KO','Longitud insuficiente'],
+    ['alumnograduacion','alumnograduacion_direccion','input',16,'Dirección válida','ADD',true,'Valor correcto'],
+    ['alumnograduacion','alumnograduacion_email','input',17,'El email debe tener un formato válido','ADD','alumnograduacion_email_format_KO','Formato incorrecto'],
+    ['alumnograduacion','alumnograduacion_email','input',18,'Email válido','ADD',true,'Valor correcto'],
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto','inputfile',19,'La foto del acto es obligatoria en alta','ADD','nuevo_alumnograduacion_fotoacto_not_exist_file_KO','Fichero ausente'],
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto','inputfile',20,'Foto del acto válida','ADD',true,'Fichero válido'],
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto','inputfile',21,'En edición la foto es opcional','EDIT',true,'Fichero opcional']
 );
 
 let alumnograduacion_tests_fields = Array(
-    ['alumnograduacion','dni_alumno',1,1,'ADD',[{dni_alumno:'1234A'}],'dni_alumno_format_KO'],
-    ['alumnograduacion','dni_alumno',2,2,'ADD',[{dni_alumno:'12345678Z'}],true],
-    ['alumnograduacion','cod_titulacion',3,3,'ADD',[{cod_titulacion:'abc'}],'cod_titulacion_format_KO'],
-    ['alumnograduacion','cod_titulacion',4,4,'ADD',[{cod_titulacion:'GREI'}],true],
-    ['alumnograduacion','nombre_trabajo',5,5,'ADD',[{nombre_trabajo:'abc'}],'nombre_trabajo_min_size_KO'],
-    ['alumnograduacion','nombre_trabajo',6,6,'ADD',[{nombre_trabajo:'Proyecto Final'}],true],
-    ['alumnograduacion','anio_academico',7,7,'ADD',[{anio_academico:'2023-2025'}],'anio_academico_range_KO'],
-    ['alumnograduacion','anio_academico',8,8,'ADD',[{anio_academico:'2023-2024'}],true],
-    ['alumnograduacion','nota_final',9,9,'ADD',[{nota_final:'12'}],'nota_final_range_KO'],
-    ['alumnograduacion','nota_final',10,10,'ADD',[{nota_final:'9.5'}],true],
-    ['alumnograduacion','tutor_principal',11,11,'ADD',[{tutor_principal:'Juan 123'}],'tutor_principal_format_KO'],
-    ['alumnograduacion','tutor_principal',12,12,'ADD',[{tutor_principal:'María Pérez'}],true],
-    ['alumnograduacion','fecha_defensa',13,13,'ADD',[{fecha_defensa:'31/02/2024'}],'fecha_defensa_value_KO'],
-    ['alumnograduacion','fecha_defensa',14,14,'ADD',[{fecha_defensa:'15/06/2024'}],true]
+    ['alumnograduacion','alumnograduacion_login',1,1,'ADD',[{alumnograduacion_login:'ab'}],'alumnograduacion_login_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_login',2,2,'ADD',[{alumnograduacion_login:'alumno01'}],true],
+    ['alumnograduacion','alumnograduacion_password',3,3,'ADD',[{alumnograduacion_password:'abc'}],'alumnograduacion_password_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_password',4,4,'ADD',[{alumnograduacion_password:'clave_segura1'}],true],
+    ['alumnograduacion','alumnograduacion_nombre',5,5,'ADD',[{alumnograduacion_nombre:'Ana3'}],'alumnograduacion_nombre_format_KO'],
+    ['alumnograduacion','alumnograduacion_nombre',6,6,'ADD',[{alumnograduacion_nombre:'Ana María'}],true],
+    ['alumnograduacion','alumnograduacion_apellidos',7,7,'ADD',[{alumnograduacion_apellidos:'López1'}],'alumnograduacion_apellidos_format_KO'],
+    ['alumnograduacion','alumnograduacion_apellidos',8,8,'ADD',[{alumnograduacion_apellidos:'López Pérez'}],true],
+    ['alumnograduacion','alumnograduacion_titulacion',9,9,'ADD',[{alumnograduacion_titulacion:'Gre'}],'alumnograduacion_titulacion_format_KO'],
+    ['alumnograduacion','alumnograduacion_titulacion',10,10,'ADD',[{alumnograduacion_titulacion:'GREI'}],true],
+    ['alumnograduacion','alumnograduacion_dni',11,11,'ADD',[{alumnograduacion_dni:'1234A'}],'alumnograduacion_dni_format_KO'],
+    ['alumnograduacion','alumnograduacion_dni',12,12,'ADD',[{alumnograduacion_dni:'12345678Z'}],true],
+    ['alumnograduacion','alumnograduacion_telefono',13,13,'ADD',[{alumnograduacion_telefono:'12345'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',14,14,'ADD',[{alumnograduacion_telefono:'999888777'}],true],
+    ['alumnograduacion','alumnograduacion_direccion',15,15,'ADD',[{alumnograduacion_direccion:'cal'}],'alumnograduacion_direccion_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',16,16,'ADD',[{alumnograduacion_direccion:'Calle Mayor 123'}],true],
+    ['alumnograduacion','alumnograduacion_email',17,17,'ADD',[{alumnograduacion_email:'correo@incorrecto'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',18,18,'ADD',[{alumnograduacion_email:'correo@dominio.com'}],true]
 );
 
 let alumnograduacion_tests_files = Array(
-    ['alumnograduacion','nuevo_memoria_pdf',15,1,'ADD','Fichero obligatorio',[], 'nuevo_memoria_pdf_not_exist_file_KO'],
-    ['alumnograduacion','nuevo_memoria_pdf',16,2,'ADD','Fichero válido',[{format_name_file:'memoria.pdf'},{type_file:'application/pdf'},{max_size_file:4096}],true],
-    ['alumnograduacion','nuevo_memoria_pdf',17,3,'EDIT','Fichero opcional',[],true]
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto',19,1,'ADD','Fichero obligatorio',[], 'nuevo_alumnograduacion_fotoacto_not_exist_file_KO'],
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto',20,2,'ADD','Fichero válido',[{format_name_file:'fotoacto.jpg'},{type_file:'image/jpeg'},{max_size_file:4096}],true],
+    ['alumnograduacion','nuevo_alumnograduacion_fotoacto',21,3,'EDIT','Fichero opcional',[],true]
 );
 
 let articulo_def_tests = Array(
