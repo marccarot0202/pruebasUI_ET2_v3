@@ -1,11 +1,14 @@
-alumnograduacion.dni_alumno: 8 dígitos seguidos de una letra mayúscula con control español.
-alumnograduacion.cod_titulacion: entre 3 y 10 caracteres en mayúsculas y números.
-alumnograduacion.nombre_trabajo: texto entre 5 y 100 caracteres con letras, números, espacios y signos básicos.
-alumnograduacion.anio_academico: patrón AAAA-AAAA con el segundo año igual al primero más uno.
-alumnograduacion.nota_final: número decimal entre 0 y 10 con hasta dos decimales.
-alumnograduacion.tutor_principal: entre 4 y 60 caracteres alfabéticos o espacios.
-alumnograduacion.fecha_defensa: fecha válida en formato dd/mm/aaaa.
-alumnograduacion.memoria_pdf: nombre de fichero con letras, números, guiones y puntos.
+alumnograduacion.alumnograduacion_login: entre 3 y 20 caracteres con letras, números o guion bajo.
+alumnograduacion.alumnograduacion_password: entre 8 y 30 caracteres con letras, números, puntos, guiones o guion bajo.
+alumnograduacion.alumnograduacion_nombre: entre 3 y 40 caracteres alfabéticos y espacios.
+alumnograduacion.alumnograduacion_apellidos: entre 3 y 60 caracteres alfabéticos y espacios.
+alumnograduacion.alumnograduacion_titulacion: valor obligatorio. Opciones permitidas GREI, MEI o MIA.
+alumnograduacion.alumnograduacion_dni: 8 dígitos seguidos de una letra mayúscula con control español.
+alumnograduacion.alumnograduacion_telefono: exactamente 9 dígitos.
+alumnograduacion.alumnograduacion_direccion: entre 5 y 120 caracteres con letras, números, espacios y puntuación básica.
+alumnograduacion.alumnograduacion_email: dirección de correo válida con formato usuario@dominio.
+alumnograduacion.alumnograduacion_fotoacto: nombre de fichero con letras, números, guiones, guiones bajos y puntos.
+alumnograduacion.nuevo_alumnograduacion_fotoacto: fichero de imagen JPG, PNG o GIF con tamaño máximo de 5MB.
 
 articulo.CodigoA: entre 1 y 11 dígitos.
 articulo.AutoresA: texto entre 1 y 200 caracteres con letras, espacios, comas y puntos.
