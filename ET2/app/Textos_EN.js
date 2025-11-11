@@ -19,7 +19,7 @@ var textos_EN = {
     'label_alumnograduacion_password': 'Password',
     'label_alumnograduacion_nombre': 'First name',
     'label_alumnograduacion_apellidos': 'Surname(s)',
-    'label_alumnograduacion_titulacion': 'Degree',
+    'label_alumnograduacion_titulacion': 'Degree (GREI/MEI/MIA)',
     'label_alumnograduacion_dni': 'National ID',
     'label_alumnograduacion_telefono': 'Phone number',
     'label_alumnograduacion_direccion': 'Postal address',
@@ -41,7 +41,7 @@ var textos_EN = {
     'alumnograduacion_apellidos_format_KO': 'The surnames only allow letters and spaces.',
     'alumnograduacion_titulacion_min_size_KO': 'The degree must contain at least 2 characters.',
     'alumnograduacion_titulacion_max_size_KO': 'The degree cannot exceed 10 characters.',
-    'alumnograduacion_titulacion_format_KO': 'The degree may only contain capital letters.',
+    'alumnograduacion_titulacion_format_KO': 'You must choose one of the allowed degrees (GREI, MEI or MIA).',
     'alumnograduacion_dni_format_KO': 'The national ID must contain 8 digits followed by an uppercase letter.',
     'alumnograduacion_dni_letter_KO': 'The control letter of the national ID is not valid.',
     'alumnograduacion_telefono_format_KO': 'The phone number must contain 9 digits.',
@@ -54,6 +54,9 @@ var textos_EN = {
     'nuevo_alumnograduacion_fotoacto_type_file_KO': 'The ceremony photo must be JPG, PNG or GIF.',
     'nuevo_alumnograduacion_fotoacto_max_size_file_KO': 'The ceremony photo exceeds the allowed size (5MB).',
     'nuevo_alumnograduacion_fotoacto_format_name_file_KO': 'The file name only allows letters, digits, dots, hyphen and underscore.',
+
+    // general errors
+    'SQL_KO': 'A database error occurred while saving. Please review the provided data.',
 
     'text_titulo_page_articulo': 'Scientific articles management',
     'text_contenido_titulo_form_articulo_ADD': 'Create article',

@@ -23,7 +23,7 @@ var textos_ES = {
     'label_alumnograduacion_password': 'Contraseña',
     'label_alumnograduacion_nombre': 'Nombre',
     'label_alumnograduacion_apellidos': 'Apellidos',
-    'label_alumnograduacion_titulacion': 'Titulación',
+    'label_alumnograduacion_titulacion': 'Titulación (GREI/MEI/MIA)',
     'label_alumnograduacion_dni': 'DNI',
     'label_alumnograduacion_telefono': 'Teléfono',
     'label_alumnograduacion_direccion': 'Dirección postal',
@@ -46,7 +46,7 @@ var textos_ES = {
     'alumnograduacion_apellidos_format_KO': 'Los apellidos solo pueden contener letras y espacios.',
     'alumnograduacion_titulacion_min_size_KO': 'La titulación debe tener al menos 2 caracteres.',
     'alumnograduacion_titulacion_max_size_KO': 'La titulación no puede superar los 10 caracteres.',
-    'alumnograduacion_titulacion_format_KO': 'La titulación solo puede contener letras mayúsculas.',
+    'alumnograduacion_titulacion_format_KO': 'Debe seleccionar una titulación válida (GREI, MEI o MIA).',
     'alumnograduacion_dni_format_KO': 'El DNI debe tener 8 dígitos y una letra mayúscula.',
     'alumnograduacion_dni_letter_KO': 'La letra del DNI no es correcta.',
     'alumnograduacion_telefono_format_KO': 'El teléfono debe tener 9 dígitos.',
@@ -59,6 +59,9 @@ var textos_ES = {
     'nuevo_alumnograduacion_fotoacto_type_file_KO': 'La foto del acto debe ser JPG, PNG o GIF.',
     'nuevo_alumnograduacion_fotoacto_max_size_file_KO': 'La foto del acto supera el tamaño permitido (5MB).',
     'nuevo_alumnograduacion_fotoacto_format_name_file_KO': 'El nombre del fichero solo puede contener letras, números, puntos, guiones y guiones bajos.',
+
+    // errores generales
+    'SQL_KO': 'Se ha producido un error al guardar en la base de datos. Comprueba los datos introducidos.',
 
     // títulos de páginas y formularios articulo
     'text_titulo_page_articulo': 'Gestión de artículos científicos',

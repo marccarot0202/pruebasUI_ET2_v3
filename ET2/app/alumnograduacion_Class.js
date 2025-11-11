@@ -13,6 +13,8 @@ class alumnograduacion extends EntidadAbstracta {
         ];
         this.mostrarespecial = ['alumnograduacion_fotoacto'];
 
+        this.titulacionesPermitidas = ['GREI', 'MEI', 'MIA'];
+
         this.attributes = [
             'alumnograduacion_login',
             'alumnograduacion_password',
@@ -29,6 +31,10 @@ class alumnograduacion extends EntidadAbstracta {
     }
 
     manual_form_creation() {
+        const opcionesTitulacion = this.titulacionesPermitidas
+            .map(codigo => `<option value='${codigo}'>${codigo}</option>`)
+            .join('');
+
         return `
             <form id='form_iu' action="" method="POST" enctype="multipart/form-data" onsubmit="" class='formulario'>
                 <label class='label_alumnograduacion_login'>alumnograduacion_login</label>
@@ -48,7 +54,10 @@ class alumnograduacion extends EntidadAbstracta {
                 <span id='span_error_alumnograduacion_apellidos'><a id='error_alumnograduacion_apellidos'></a></span>
                 <br>
                 <label class='label_alumnograduacion_titulacion'>alumnograduacion_titulacion</label>
-                <input type='text' id='alumnograduacion_titulacion' name='alumnograduacion_titulacion'/>
+                <select id='alumnograduacion_titulacion' name='alumnograduacion_titulacion'>
+                    <option value=''></option>
+                    ${opcionesTitulacion}
+                </select>
                 <span id='span_error_alumnograduacion_titulacion'><a id='error_alumnograduacion_titulacion'></a></span>
                 <br>
                 <label class='label_alumnograduacion_dni'>alumnograduacion_dni</label>
@@ -273,15 +282,8 @@ class alumnograduacion extends EntidadAbstracta {
     }
 
     ADD_alumnograduacion_titulacion_validation() {
-        if (!this.validations.min_size('alumnograduacion_titulacion', 2)) {
-            this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_min_size_KO');
-            return 'alumnograduacion_titulacion_min_size_KO';
-        }
-        if (!this.validations.max_size('alumnograduacion_titulacion', 10)) {
-            this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_max_size_KO');
-            return 'alumnograduacion_titulacion_max_size_KO';
-        }
-        if (!this.validations.format('alumnograduacion_titulacion', '^[A-Z]+$')) {
+        const valor = document.getElementById('alumnograduacion_titulacion').value;
+        if (!this.titulacionesPermitidas.includes(valor)) {
             this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_format_KO');
             return 'alumnograduacion_titulacion_format_KO';
         }
@@ -484,16 +486,12 @@ class alumnograduacion extends EntidadAbstracta {
 
     SEARCH_alumnograduacion_titulacion_validation() {
         const valor = document.getElementById('alumnograduacion_titulacion').value;
-        if (valor === '') {
+        if (valor === '' || this.titulacionesPermitidas.includes(valor)) {
             this.dom.mostrar_exito_campo('alumnograduacion_titulacion');
             return true;
         }
-        if (!this.validations.format('alumnograduacion_titulacion', '^[A-Z]*$')) {
             this.dom.mostrar_error_campo('alumnograduacion_titulacion', 'alumnograduacion_titulacion_format_KO');
             return 'alumnograduacion_titulacion_format_KO';
-        }
-        this.dom.mostrar_exito_campo('alumnograduacion_titulacion');
-        return true;
     }
 
     SEARCH_alumnograduacion_dni_validation() {

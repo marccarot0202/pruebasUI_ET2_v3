@@ -2,7 +2,7 @@ alumnograduacion.alumnograduacion_login: entre 3 y 20 caracteres con letras, nú
 alumnograduacion.alumnograduacion_password: entre 8 y 30 caracteres con letras, números, puntos, guiones o guion bajo.
 alumnograduacion.alumnograduacion_nombre: entre 3 y 40 caracteres alfabéticos y espacios.
 alumnograduacion.alumnograduacion_apellidos: entre 3 y 60 caracteres alfabéticos y espacios.
-alumnograduacion.alumnograduacion_titulacion: entre 2 y 10 letras mayúsculas.
+alumnograduacion.alumnograduacion_titulacion: valor obligatorio. Opciones permitidas GREI, MEI o MIA.
 alumnograduacion.alumnograduacion_dni: 8 dígitos seguidos de una letra mayúscula con control español.
 alumnograduacion.alumnograduacion_telefono: exactamente 9 dígitos.
 alumnograduacion.alumnograduacion_direccion: entre 5 y 120 caracteres con letras, números, espacios y puntuación básica.
